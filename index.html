@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mardiah Anrissya</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1>Mardiah Anrissya</h1>
+    </header>
+
+    <section class="about">
+        <img src="foto-about.jpeg" alt="Foto Mardiah Anrissya" class="profile-pic">
+        <h2>About Me</h2>
+        <p>Halo! Aku Mardiah Anrissya, seorang mahasiswa Teknik Informatika di Universitas Riau. Aku senang banget eksplor hal-hal yang berkaitan dengan teknologi, desain, dan cara membuat sesuatu jadi lebih menarik dan mudah dipahami orang lain. Selain coding, aku juga suka utak-atik desain pakai Canva, dan belakangan lagi tertarik mendalami UI/UX design. Kadang juga jadi “anak PowerPoint” buat presentasi yang kece. Yuk, kenalan lebih lanjut!</p>
+    </section>
+
+    <section class="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Microsoft Word & PowerPoint</li>
+            <li>Excel</li>
+            <li>Canva</li>
+            <li>UI/UX Design</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>© 2025 Mardiah Anrissya</p>
+    </footer>
+
+    <script>
+        // Animasi scroll sederhana
+        document.addEventListener("DOMContentLoaded", () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                    }
+                });
+            });
+
+            document.querySelectorAll("section").forEach(section => {
+                section.classList.add("hidden");
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>
